@@ -1,0 +1,14 @@
+<nav class="sub-header gap">
+  <ul class="container flex f-right f-gap">
+    <!-- IF LOGGED IN PERSON HAS CREATED AN POST CAN EDIT OR DELETE ELSE NOT -->
+    <% if(user.email === article.author.email) { %>
+    <li>
+      <a class="add btn" href="/articles/<%= article.id %>/edit">EDIT</a>
+    </li>
+
+    <li>
+      <a class="add btn" href="/articles/<%= article.id %>/delete">DELETE</a>
+    </li>
+    <% } %>
+  </ul>
+</nav>

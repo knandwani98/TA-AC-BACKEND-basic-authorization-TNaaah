@@ -1,0 +1,38 @@
+<!-- HEADER -->
+<% include partials/header.ejs %>
+
+<!-- VIEW ALL ARTICLES-->
+
+<section class="banner gap4">
+  <div class="container flex f-center">
+    <!-- <h1>ALL ARTICLES</h1> -->
+  </div>
+  <% include partials/flash.ejs %>
+</section>
+
+<% if (allArticles) { %>
+<!-- ALL ARTICLES -->
+<section class="all-articles">
+  <div class="container flex f-left f-gap wrap">
+    <!-- DYNAMIC ARTICLES -->
+    <% allArticles.forEach((article) => { %>
+    <!-- EACH ARTICLE -->
+    <div class="article-card">
+      <div class="flex">
+        <a class="link" href="/articles/<%= article.id %>">
+          <h2><%= article.title %></h2>
+        </a>
+
+        <a class="author" href="/users/<%= article.author.id %>">
+          - <%= article.author.email %></a
+        >
+      </div>
+      <p class="gap">
+        <%=article.description.substring(0, 30).concat("...") %>
+      </p>
+      <a class="link" href="/articles/<%= article.id %>">read more..</a>
+    </div>
+    <% }) %>
+  </div>
+</section>
+<% } %>

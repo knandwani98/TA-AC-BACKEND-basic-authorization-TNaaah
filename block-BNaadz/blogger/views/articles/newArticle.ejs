@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+
+<!-- FORM -->
+<section class="login flex f-center">
+  <div class="container">
+    <h1 class="center">POST ARTICLE</h1>
+
+    <form class="form" action="/articles/new" method="POST">
+      <fieldset>
+        <input class="form-box" type="text" placeholder="title" name="title" />
+
+        <textarea
+          class="form-box"
+          name="description"
+          id=""
+          placeholder="description"
+          cols="30"
+          rows="4"
+        ></textarea>
+
+        <input class="btn form-box" type="submit" value="POST" />
+      </fieldset>
+    </form>
+  </div>
+</section>

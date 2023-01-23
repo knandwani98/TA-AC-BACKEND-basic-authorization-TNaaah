@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Blogger.com</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container flex">
+        <a class="logo" href="/">blogger</a>
+
+        <!-- MAIN MENU -->
+        <nav class="nav-bar">
+          <ul class="flex f-right f-gap">
+            <!-- IF LOGGED IN -->
+            <% if (user) { %>
+
+            <li class="username btn"><%= user.name %></li>
+
+            <li>
+              <a class="add btn" href="/articles/new">Add an Article</a>
+            </li>
+
+            <li>
+              <a class="logout btn" href="/users/logout">logout</a>
+            </li>
+
+            <% } else { %>
+            <!-- IF NOT LOGGED IN -->
+            <li>
+              <a class="login btn" href="/users/login">login</a>
+            </li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

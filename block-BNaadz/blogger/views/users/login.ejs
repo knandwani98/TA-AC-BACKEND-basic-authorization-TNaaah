@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Blogger.com</title>
+  </head>
+  <body class="user">
+    <header class="header flex f-center">
+      <a class="logo" href="/">Blogger</a>
+    </header>
+    <!-- FORM -->
+    <section class="login flex f-center">
+      <div class="container">
+        <h1 class="center">LOGIN</h1>
+
+        <% include ../partials/flash.ejs %>
+
+        <form class="form" action="/users/login" method="POST">
+          <fieldset>
+            <input
+              class="form-box"
+              type="email"
+              placeholder="email"
+              name="email"
+            />
+
+            <input
+              class="form-box"
+              type="password"
+              placeholder="password"
+              name="password"
+            />
+
+            <div class="flex f-gap">
+              <input class="btn form-box" type="submit" value="LOGIN" />
+
+              <a class="form-box btn" href="/">CANCEL</a>
+            </div>
+          </fieldset>
+        </form>
+        <div class="flex gap f-center">
+          <strong>
+            new to blogger?
+            <a href="/users/new">create an account.</a>
+          </strong>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

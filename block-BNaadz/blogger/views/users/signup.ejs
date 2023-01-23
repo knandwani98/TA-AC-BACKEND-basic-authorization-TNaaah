@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Blogger.com</title>
+  </head>
+  <body class="user">
+    <header class="header flex f-center">
+      <a class="logo" href="/">Blogger</a>
+    </header>
+
+    <!-- FORM -->
+    <section class="signup flex f-center">
+      <div class="container">
+        <h1 class="center">CREATE AN ACCOUNT</h1>
+
+        <form class="form" action="/users/new" method="POST">
+          <fieldset>
+            <input
+              class="form-box"
+              type="text"
+              placeholder="name"
+              name="name"
+            />
+
+            <input
+              class="form-box"
+              type="email"
+              placeholder="email..     (unique)"
+              name="email"
+            />
+
+            <input
+              class="form-box"
+              type="password"
+              placeholder="password...     (min: 5 chr. - max: 10 chr.)"
+              name="password"
+            />
+
+            <div class="flex f-gap">
+              <input class="btn form-box" type="submit" value="CREATE" />
+
+              <a class="form-box btn" href="/">CANCEL</a>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="flex gap f-center">
+          <strong>
+            already have account?
+            <a href="/users/login">login</a>
+          </strong>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

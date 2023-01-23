@@ -1,0 +1,9 @@
+<!-- flash -->
+<div class="flex f-center gap">
+  <% if (flash.success) { %>
+  <p class="flash success"><%= flash.success %></p>
+  <% } else if (flash.error) {%>
+  <p class="flash error"><%= flash.error %></p>
+  <% } %>
+</div>
+<!--  -->

@@ -1,0 +1,19 @@
+<!-- HEADER -->
+<% include ../partials/header.ejs %>
+
+<!-- SUB HEADER -->
+<% include ../partials/subHeader.ejs %>
+
+<main class="article">
+  <!-- ARTICLE -->
+
+  <article class="article gap4">
+    <div class="container">
+      <h2 class="title"><%= article.title %></h2>
+      <p class="description gap"><%= article.description %></p>
+      <cite class="author">
+        - <%= article.author.email %> (<%= article.author.name %>)</cite
+      >
+    </div>
+  </article>
+</main>
